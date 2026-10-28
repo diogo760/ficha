@@ -1,116 +1,127 @@
 #include <iostream>
+#include <string.h>
 
 using namespace std;
 
+char grelha[9] = {'0', '1', '2','3','4','5','6','7','8'};
+
+void tabela(){
+    cout << "\n " <<grelha[0] << "|" << grelha[1] << "|" << grelha[2];
+    cout << "\n " <<grelha[3] << "|" << grelha[4] << "|" << grelha[5];
+    cout << "\n " <<grelha[6] << "|" << grelha[7] << "|" << grelha[8];
+    cout << "\nonde queres jogar";
+}
 
 int main () {
 
-    int posicao = 0;
-    string peca= "X";
-    string p1="1",p2="2",p3="3",p4="4",p5="5",p6="6",p7="7",p8="8",p9="9";
-    bool jogoterminou =false, aceitajogada;
-    while (!jogoterminou) {
-        cout << "\n " <<p1 << "|" << p2 << "|" << p3;
-        cout << "\n " <<p4 << "|" << p5 << "|" << p6;
-        cout << "\n " <<p7 << "|" << p8 << "|" << p9;
-        cout << "\nonde queres jogar";
+    string peca= "x";
+    int posicao;
+     bool jogoterminou =false, aceitajogada;
+
+    while (!jogoterminou){
+        tabela();
         cin >> posicao;
 
-        switch(posicao) {
-            case 1:
-                if (p1=="1"){
-                    p1 = peca;
-                    aceitajogada=true;
-        }
-            break;
-        default:
-            cout << "\n Burrinho da silva... 1 a 9 apenas \n";
-            break;
-    }
     if (aceitajogada){
         if (peca=="x"){
             peca="o";
-        }else {
+        }else if (peca=="x") {
         peca= "x";
-        }
-        } else {
-            cout << "\nposicao ja preenchida";
+        cout << "\nposicao ja preenchida";
         }
     }
-         switch(posicao) {
+
+
+        switch(posicao) {
+            case 0:
+                if (grelha[0]=='0'){
+                    grelha[0] = peca[0];
+                    aceitajogada=true;
+
+
+
+
+            case 1:
+                if (grelha[1]=='1'){
+                    grelha[1] = peca[0];
+                    aceitajogada=true;
+        }
+            break;
+
+
+
             case 2:
-                if (p2=="2"){
-                    p2 = peca;
+                if (grelha[2]=='2'){
+                    grelha[2] = peca[0];
                     aceitajogada=true;
         }
             break;
-         }
 
-          switch(posicao) {
+
+
             case 3:
-                if (p3=="3"){
-                    p3 = peca;
+                if (grelha[3]=='3'){
+                    grelha[3] = peca[0];
                     aceitajogada=true;
         }
             break;
-         }
 
-          switch(posicao) {
+
+
             case 4:
-                if (p4=="4"){
-                    p4 = peca;
+                if (grelha[4]=='4'){
+                    grelha[4] = peca[0];
                     aceitajogada=true;
         }
             break;
-         }
 
-          switch(posicao) {
+
+
             case 5:
-                if (p5=="5"){
-                    p5 = peca;
+                if (grelha[5]=='5'){
+                    grelha[5] = peca[0];
                     aceitajogada=true;
         }
             break;
-         }
 
-          switch(posicao) {
+
+
             case 6:
-                if (p6=="6"){
-                    p6 = peca;
+                if (grelha[6]=='6'){
+                    grelha[6] = peca[0];
                     aceitajogada=true;
         }
             break;
-         }
 
-          switch(posicao) {
+
             case 7:
-                if (p7=="7"){
-                    p7 = peca;
+                if (grelha[7]=='7'){
+                    grelha[7] = peca[0];
                     aceitajogada=true;
         }
             break;
-         }
 
-          switch(posicao) {
+
+
             case 8:
-                if (p8=="8"){
-                    p8 = peca;
+                if (grelha[8]=='8'){
+                    grelha[8] = peca[0];
                     aceitajogada=true;
         }
             break;
-         }
 
-          switch(posicao) {
-            case 9:
-                if (p9=="9"){
-                    p9 = peca;
-                    aceitajogada=true;
+
         }
-            break;
-         }
 
 
 
 
+
+
+
+    }
+
+    }
     return 0;
-}
+    }
+
