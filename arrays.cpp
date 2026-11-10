@@ -1,26 +1,24 @@
-#include <iostream>
-#include <string.h>
+#include<iostream>
 using namespace std;
 
-const int N=5;
+int main(){
 
-int main () {
+#define N 10
 
+int nums[10];
+int soma=0;
 
-    char nome[31],primeiraletra =' ',sundaletra =' ';
-     // até 30 letras + o '\0'
-    printf("Nome: ");
-     //scanf("%30s", nome);
-     // SEM & - o nome do vetor já é um endereço
+    for (int i = 0; i < N; i++){
 
-     cin.getline(nome, 31);
+    cout << "numero " <<( i + 1) << " : ";
+    cin >> nums[i];
 
-     printf("\nOla, %s!\n", nome);
-
-     printf("\nOla, %c!\n", nome[0]);
-     cout << "\nOla," << nome[0] << "!\n";
-
-
-
-        return 0;
+    soma = soma+ nums[i]* nums[i];
     }
+    cout << soma;
+
+
+    return 0;
+
+}
+
